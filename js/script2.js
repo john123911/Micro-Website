@@ -1,3 +1,4 @@
+import { initializeApp } from "firebase/app";
 const firebaseConfig = {
 	apiKey: "AIzaSyAs_aA90RCE_mGD3KlBDs4G0MkSorGS2FA",
 	authDomain: "micro-realtimedatabase.firebaseapp.com",
@@ -9,12 +10,12 @@ const firebaseConfig = {
 	measurementId: "G-P9NDH3FFXV"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
+  const app = initializeApp(firebaseConfig);
+  
 $(document).ready(function(){
     const database = firebase.database();
 	//var Led1Status;
-	const ldrData;
+	var LDRValue;
 
 	database.ref().on("value", function(snap){
 		// Led1Status = snap.val().Led1Status;
@@ -45,4 +46,4 @@ $(document).ready(function(){
 	// 		Led1Status = "1";
 	// 	}
 	// })
-// });
+ });
