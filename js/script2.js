@@ -13,13 +13,13 @@ const firebaseConfig = {
 
 $(document).ready(function(){
     const database = firebase.database();
-	var firebaseRef = firebase.database().ref().child("LDRValue");
-	document.getElementById("water-level").innerHTML = LDRValue;
 	//var Led1Status;
 	const ldrData;
 
 	database.ref().on("value", function(snap){
 		// Led1Status = snap.val().Led1Status;
+		LDRValue = snap.val().LDRValue;
+		document.getElementById("water-level").innerHTML = LDRValue;
 
 		// if(Led1Status == "1"){    // check from the firebase
 		// 	//$(".Light1Status").text("The light is off");
