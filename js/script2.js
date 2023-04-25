@@ -11,7 +11,7 @@ const firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-$(document).ready(function(){s
+$(document).ready(function(){
     const database = firebase.database();
 	var firebaseRef = firebase.database().ref().child("LDRValue");
 	document.getElementById("water-level").innerHTML = LDRValue;
