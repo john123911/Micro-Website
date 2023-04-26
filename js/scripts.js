@@ -10,4 +10,4 @@ const firebaseConfig = {
 	measurementId: "G-P9NDH3FFXV"
   };
 
-  const app = initializeApp(firebaseConfig);s
+  const app = initializeApp(firebaseConfig);
