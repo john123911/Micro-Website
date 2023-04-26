@@ -1,71 +1,13 @@
-
-// SIDEBAR TOGGLE
-
-var sidebarOpen = false;
-var sidebar = document.getElementById("sidebar");
-
-function openSidebar() {
-    if (!sidebarOpen) {
-        sidebar.classList.add("sidebar-responsive");
-        sidebarOpen = true;
-    }   
-}
-
-function closeSidebar() {
-    if(sidebarOpen){
-        sidebar.classList.remove("sidebar-responsive");
-        sidebarOpen = false;
-    }
-    
-}
-
-// ----------CHARTS-------------
-
-// BAR Graph
-
-var barChartOptions = {
-    series: [{
-    data: [10, 8, 6, 4, 2],
-    name: "Products"
-  }],
-    chart: {
-    type: 'bar',
-    height: 350,
-    toolbar:{
-        show: false,
-    },
-  },
-  colors:[
-    "#2962ff",
-    "#d50000",
-    "#2e7d32",
-    "#ff6d00",
-    "#583cb3",
-  ],
-  plotOptions: {
-    bar: {
-      borderRadius: 4,
-      horizontal: true,
-      horizontal: false,
-      columnWidth: "40%",
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
-  xaxis: {
-    categories: ['Laptop', 'Phone', 'Monitor', 'Headphones', 'Camera', 
-    ],
-  },
-  yaxis:{
-    title:{
-        text: "Count",
-        style:{
-            color: "#f5f7ff",
-        },
-    },
-  }
+import { initializeApp } from "firebase/app";
+const firebaseConfig = {
+	apiKey: "AIzaSyAs_aA90RCE_mGD3KlBDs4G0MkSorGS2FA",
+	authDomain: "micro-realtimedatabase.firebaseapp.com",
+	databaseURL: "https://micro-realtimedatabase-default-rtdb.asia-southeast1.firebasedatabase.app",
+	projectId: "micro-realtimedatabase",
+	storageBucket: "micro-realtimedatabase.appspot.com",
+	messagingSenderId: "711979305578",
+	appId: "1:711979305578:web:0b7f4c01fe2091f6e99813",
+	measurementId: "G-P9NDH3FFXV"
   };
 
-  var chart = new ApexCharts(document.querySelector("#bar-chart"), barChartOptions);
-  chart.render();
+  const app = initializeApp(firebaseConfig);s
