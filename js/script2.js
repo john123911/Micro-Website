@@ -1,4 +1,5 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
+
 const firebaseConfig = {
 	apiKey: "AIzaSyAs_aA90RCE_mGD3KlBDs4G0MkSorGS2FA",
 	authDomain: "micro-realtimedatabase.firebaseapp.com",
@@ -10,7 +11,7 @@ const firebaseConfig = {
 	measurementId: "G-P9NDH3FFXV"
   };
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  initializeApp(firebaseConfig);
   
 $(document).ready(function(){
     const database = firebase.database();
