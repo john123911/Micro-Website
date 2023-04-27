@@ -1,27 +1,27 @@
-import { initializeApp } from "firebase/app"
+// import { initializeApp } from "firebase/app"
 
-const firebaseConfig = {
-	apiKey: "AIzaSyAs_aA90RCE_mGD3KlBDs4G0MkSorGS2FA",
-	authDomain: "micro-realtimedatabase.firebaseapp.com",
-	databaseURL: "https://micro-realtimedatabase-default-rtdb.asia-southeast1.firebasedatabase.app",
-	projectId: "micro-realtimedatabase",
-	storageBucket: "micro-realtimedatabase.appspot.com",
-	messagingSenderId: "711979305578",
-	appId: "1:711979305578:web:0b7f4c01fe2091f6e99813",
-	measurementId: "G-P9NDH3FFXV"
-  };
-  // Initialize Firebase
-  initializeApp(firebaseConfig);
+// const firebaseConfig = {
+// 	apiKey: "AIzaSyAs_aA90RCE_mGD3KlBDs4G0MkSorGS2FA",
+// 	authDomain: "micro-realtimedatabase.firebaseapp.com",
+// 	databaseURL: "https://micro-realtimedatabase-default-rtdb.asia-southeast1.firebasedatabase.app",
+// 	projectId: "micro-realtimedatabase",
+// 	storageBucket: "micro-realtimedatabase.appspot.com",
+// 	messagingSenderId: "711979305578",
+// 	appId: "1:711979305578:web:0b7f4c01fe2091f6e99813",
+// 	measurementId: "G-P9NDH3FFXV"
+//   };
+//   // Initialize Firebase
+//   initializeApp(firebaseConfig);
   
-$(document).ready(function(){
-    const database = firebase.database();
-	//var Led1Status;
-	var LDRValue;
+// $(document).ready(function(){
+//     const database = firebase.database();
+// 	//var Led1Status;
+// 	var LDRValue;
 
-	database.ref().on("value", function(snap){
-		// Led1Status = snap.val().Led1Status;
-		LDRValue = snap.val().LDRValue;
-		document.getElementById("water-level").innerHTML = LDRValue;
+// 	database.ref().on("value", function(snap){
+// 		// Led1Status = snap.val().Led1Status;
+// 		LDRValue = snap.val().LDRValue;
+// 		document.getElementById("water-level").innerHTML = LDRValue;
 
 		// if(Led1Status == "1"){    // check from the firebase
 		// 	//$(".Light1Status").text("The light is off");
@@ -32,7 +32,7 @@ $(document).ready(function(){
 		// 	document.getElementById("unact").style.display = "block";
 		// 	document.getElementById("act").style.display = "none";
 		// }
-	});
+	// });
 
 	
 
