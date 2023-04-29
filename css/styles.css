@@ -51,7 +51,6 @@ body{
     grid-area: sidebar;
     height: 100%;
     background-color: #263043;
-    /* color: #9799ab; */
     overflow-y: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
