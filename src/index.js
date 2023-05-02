@@ -1,3 +1,4 @@
+
 import {initializeApp} from "firebase/app"
 import { 
     getDatabase,ref, onValue
@@ -23,6 +24,17 @@ onValue(waterLevel, (snapshot) => {
   const data = snapshot.val();
   const water_level = document.getElementById('water-level');
   water_level.innerText = data;
+  const firstCard = document.querySelector('.card:first-child');
+  if (data >=100) {
+    
+    firstCard.style.backgroundColor = 'red';
+  }
+  else if(data>80 && data<100 ){
+    firstCard.style.backgroundColor = 'orange';
+  }
+  else{
+    firstCard.style.backgroundColor = '#087908';
+  }
 });
 
 const waterFlow = ref(db, 'waterFlow');
@@ -30,6 +42,18 @@ onValue(waterFlow, (snapshot) => {
   const data = snapshot.val();
   const element = document.getElementById('water-flow');
   element.innerText = data;
+  const secondCard = document.querySelector('.card:nth-child(2)');
+  if (data>=100) {
+    
+    secondCard.style.backgroundColor = 'red';
+  }
+  else if(data>80 && data<100 ){
+    secondCard.style.backgroundColor = 'orange';
+  }
+  else{
+    secondCard.style.backgroundColor = '#087908';
+  }
+
 });
 
 const rainInt = ref(db, 'rainInt');
@@ -37,6 +61,17 @@ onValue(rainInt, (snapshot) => {
   const data = snapshot.val();
   const element = document.getElementById('rain-intensity');
   element.innerText = data;
+  const thirdChild = document.querySelector('.card:nth-child(3)');
+  if (data>=100) {
+    
+    thirdChild.style.backgroundColor = 'red';
+  }
+  else if(data>80 && data<100 ){
+    thirdChild.style.backgroundColor = 'orange';
+  }
+  else{
+    thirdChild.style.backgroundColor = '#087908';
+  }
 });
 
 
@@ -59,5 +94,7 @@ function closeSidebar() {
         sidebarOpen = false;
     }
 }
+
+
 
 
