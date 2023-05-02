@@ -27,7 +27,7 @@ body{
      "sidebar header header header"
      "sidebar main main main";
      height:100vh;
-     max-height: fit-content;
+     max-height:0%;
 
 }
 
