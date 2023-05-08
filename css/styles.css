@@ -156,6 +156,11 @@ body{
     font-size: 45px;
 }
 
+.values{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+}
+
 .charts{
     display: grid;
     grid-template-columns: 1fr 1fr;
