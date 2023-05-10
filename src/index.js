@@ -25,11 +25,11 @@ onValue(waterLevel, (snapshot) => {
   const water_level = document.getElementById('water-level');
   water_level.innerText = data;
   const firstCard = document.querySelector('.card:first-child');
-  if (data >=100) {
+  if (data >=90) {
     
     firstCard.style.backgroundColor = 'red';
   }
-  else if(data>80 && data<100 ){
+  else if(data>74 && data<90 ){
     firstCard.style.backgroundColor = 'orange';
   }
   else{
@@ -56,7 +56,7 @@ onValue(waterFlow, (snapshot) => {
 
 });
 
-const rainInt = ref(db, 'rainInt');
+const rainInt = ref(db, 'rainIntensity');
 onValue(rainInt, (snapshot) => {
   const data = snapshot.val();
   const element = document.getElementById('rain-intensity');
