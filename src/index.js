@@ -25,11 +25,11 @@ onValue(waterLevel, (snapshot) => {
   const water_level = document.getElementById('water-level');
   water_level.innerText = data;
   const firstCard = document.querySelector('.card:first-child');
-  if (data >=90) {
+  if (data >=22.6) {
     
     firstCard.style.backgroundColor = 'red';
   }
-  else if(data>74 && data<90 ){
+  else if(data>18.74 && data<22.6 ){
     firstCard.style.backgroundColor = 'orange';
   }
   else{
