@@ -43,11 +43,11 @@ onValue(waterFlow, (snapshot) => {
   const element = document.getElementById('water-flow');
   element.innerText = data;
   const secondCard = document.querySelector('.card:nth-child(2)');
-  if (data>=100) {
+  if (data>=21.886) {
     
     secondCard.style.backgroundColor = 'red';
   }
-  else if(data>80 && data<100 ){
+  else if(data>19.4 && data<21.886 ){
     secondCard.style.backgroundColor = 'orange';
   }
   else{
@@ -62,11 +62,11 @@ onValue(rainInt, (snapshot) => {
   const element = document.getElementById('rain-intensity');
   element.innerText = data;
   const thirdChild = document.querySelector('.card:nth-child(3)');
-  if (data>=100) {
+  if (data>=43) {
     
     thirdChild.style.backgroundColor = 'red';
   }
-  else if(data>80 && data<100 ){
+  else if(data>32.655 && data<43 ){
     thirdChild.style.backgroundColor = 'orange';
   }
   else{
