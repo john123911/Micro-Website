@@ -25,11 +25,11 @@ onValue(waterLevel, (snapshot) => {
   const water_level = document.getElementById('water-level');
   water_level.innerText = data;
   const firstCard = document.querySelector('.card:first-child');
-  if (data >=22.6) {
+  if (data >=20.64) {
     
     firstCard.style.backgroundColor = 'red';
   }
-  else if(data>18.74 && data<22.6 ){
+  else if(data>15.48 && data<20.64 ){
     firstCard.style.backgroundColor = 'orange';
   }
   else{
@@ -62,11 +62,11 @@ onValue(rainInt, (snapshot) => {
   const element = document.getElementById('rain-intensity');
   element.innerText = data;
   const thirdChild = document.querySelector('.card:nth-child(3)');
-  if (data>=43) {
+  if (data>=82.8) {
     
     thirdChild.style.backgroundColor = 'red';
   }
-  else if(data>32.655 && data<43 ){
+  else if(data>62.1 && data<82.8 ){
     thirdChild.style.backgroundColor = 'orange';
   }
   else{
