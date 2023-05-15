@@ -25,6 +25,8 @@ onValue(waterLevel, (snapshot) => {
   const water_level = document.getElementById('water-level');
   water_level.innerText = data;
   const firstCard = document.querySelector('.card:first-child');
+  const yellow_sign = document.getElementById('wlevel-yellow');
+  const red_sign = document.getElementById('wlevel-red');
   if (data >=22.6) {
     
     firstCard.style.backgroundColor = 'red';
