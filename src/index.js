@@ -25,15 +25,24 @@ onValue(waterLevel, (snapshot) => {
   const water_level = document.getElementById('water-level');
   water_level.innerText = data;
   const firstCard = document.querySelector('.card:first-child');
-  if (data >=90) {
+  const yellow_sign = document.getElementById('wlevel-yellow');
+  const red_sign = document.getElementById('wlevel-red');
+  if (data >=22.6) {
     
     firstCard.style.backgroundColor = 'red';
+    red_sign.style.display = 'block';
+    yellow_sign.style.display = 'none';
   }
-  else if(data>74 && data<90 ){
+  else if(data>15.48 && data<20.64 ){
     firstCard.style.backgroundColor = 'orange';
+    yellow_sign.style.display = 'block';
+    red_sign.style.display = 'none';
+
   }
   else{
     firstCard.style.backgroundColor = '#087908';
+    yellow_sign.style.display = 'none';
+    red_sign.style.display = 'none';
   }
 });
 
@@ -43,15 +52,26 @@ onValue(waterFlow, (snapshot) => {
   const element = document.getElementById('water-flow');
   element.innerText = data;
   const secondCard = document.querySelector('.card:nth-child(2)');
-  if (data>=100) {
+  const yellow_sign = document.getElementById('wflow-yellow');
+  const red_sign = document.getElementById('wflow-red');
+
+  if (data>=21.886) {
     
     secondCard.style.backgroundColor = 'red';
+    red_sign.style.display = 'block';
+    yellow_sign.style.display = 'none';
+    
   }
-  else if(data>80 && data<100 ){
+  else if(data>19.4 && data<21.886 ){
     secondCard.style.backgroundColor = 'orange';
+    yellow_sign.style.display = 'block';
+    red_sign.style.display = 'none';
+    
   }
   else{
     secondCard.style.backgroundColor = '#087908';
+    yellow_sign.style.display = 'none';
+    red_sign.style.display = 'none';
   }
 
 });
@@ -62,15 +82,21 @@ onValue(rainInt, (snapshot) => {
   const element = document.getElementById('rain-intensity');
   element.innerText = data;
   const thirdChild = document.querySelector('.card:nth-child(3)');
-  if (data>=100) {
+  if (data>=43) {
     
     thirdChild.style.backgroundColor = 'red';
+    red_sign.style.display = 'block';
+    yellow_sign.style.display = 'none';
   }
-  else if(data>80 && data<100 ){
+  else if(data>62.1 && data<82.8 ){
     thirdChild.style.backgroundColor = 'orange';
+    yellow_sign.style.display = 'block';
+    red_sign.style.display = 'none';
   }
   else{
     thirdChild.style.backgroundColor = '#087908';
+    yellow_sign.style.display = 'none';
+    red_sign.style.display = 'none';
   }
 });
 

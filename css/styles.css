@@ -134,6 +134,48 @@ body{
     border-radius: 10px;
 }
 
+#wlevel-yellow{
+    display: none;
+    position: absolute;
+    right: 110px;
+    top: 210px;
+}
+
+#wlevel-red{
+    display: none;
+    position: absolute;
+    right: 110px;
+    top: 210px;
+}
+
+#wflow-yellow{
+    display: none;
+    position: absolute;
+    right: 110px;
+    top: 420px;
+}
+
+#wflow-red{
+    display: none;
+    position: absolute;
+    right: 110px;
+    top: 420px;
+}
+
+#rIntensity-yellow{
+    display: none;
+    position: absolute;
+    right: 110px;
+    top: 620px;
+}
+
+#rIntensity-red{
+    display: none;
+    position: absolute;
+    right: 110px;
+    top: 620px;
+}
+
 .card:first-child{
     background-color: #087908;
 }
